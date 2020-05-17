@@ -47,7 +47,7 @@
 \begin{document}
 
 
-\title{Social Friction and the Distribution of Privileges in Online Communities}
+\title{Social Friction and the Distribution of Responsibilities in Online Communities}
 
 %
 
@@ -108,6 +108,8 @@ Introduction goes here.
 
 \section{Social Friction}
 
+\textit{(NOTE: this section is maybe a bit long. My main goal at the start was to give social friction a grounding in sociology/anthropology that gave it more credibility. I haven't been able to find any literature that exactly mapped to the concept. I suppose that this section seeks to justify the introduction of ``social friction'' as a new term instead, while still showing its connections to the humanities)}
+
 We use the term {\itshape social friction} to describe the natural barriers to entry an individual may face when joining a community. If the community is a group of friends, a newcomer seeking to join the friend group will need to gain the trust of the group before they are accepted. If the community is a town, a newcomer must buy or rent property in that town to be considered a resident. If the community is a family, then a newcomer must marry a family member (or be born of a family member) to be considered a member of that family. In each of these scenarios, a newcomer to the community needs to meet certain criteria (accruing trust, buying property, courtship and marriage) before they can attain community membership. We use the term {\itshape social friction} to describe the challenges encountered in meeting those criteria. 
 
 Social friction is related to the concepts of \textit{social barriers} and \textit{rites of passage} from Anthropology and Sociology. {\itshape Social barriers} are used broadly in the literature to describe non-technological hindrances that make it more difficult for an individual or group to complete an action, whether that action be joining a social movement \cite{klandermans1987potentials}, visiting a city park \cite{cutts2009city}, accepting a new energy source\cite{pasqualetti2011social}, or achieving economic empowerment\cite{woolcock2000removing}. The varied contexts in which the idea of a social barrier appears highlight a key difference between that term and our idea of social friction: that of scope. A social barrier can refer to a broad set of phenomena, whereas social friction is more specific. In fact, one could think of social friction as the specific social barriers that hinder an individual from joining a community (rather than, say, accepting a new energy source). 
@@ -130,21 +132,22 @@ Much of the harm and disinformation in online social networks is caused not by r
 
 Furthermore, the presence of bots is not the  only factor contributing to the political disarray of most social networks: real humans can also take up the task of spreading disinformation and propaganda, sometimes for pay \cite{bradshaw2017troops}. Also problematic are the data collection practices of firms that use personal data to create targeted political messaging. The public's negative response to such practices are perhaps best exemplified in the Facebook-Cambridge Analytica scandal \cite{CambridgeAnalyticaNYT}.
 
+Overall, we worry that in the context of social media, and more specifically in the context of social media discussions related to politics, the openness of the internet has allowed for more harm than good. Specifically, we feel that the idea that any user can receive incoming information from any other source has been abused by malicious parties who inundate regular users with so much bad-faith information that distinguishing between the good from the bad, real people and credible sources from bots and disinformation, is all but impossible.  
 
-
-\textit{(TODO:) conclude this section by arguing that social networks would benefit from more social friction w/r/t joining various groups.}
 
 \textit{NOTE: I also wonder if some of this information would be better suited for the introduction.}
 
-\section{Mastodon and the distribution of administrative privileges}
+\section{Mastodon and distributed administration/hosting}
 
-Mastodon is microblogging service similar to Twitter. Users share short messages called ``toots'', which they can favorite, reply to, and ``boost'' (an analog to Twitter's retweet functionality). Mastodon does not have the recommendation features that Twitter has (i.e. ``who to follow'' suggestions), but recent work has shown that implementing recommender systems on top of Mastodon is possible \cite{trienes2018recommending}. Like Twitter, Mastodon is developed by a centralized team.
+Mastodon is microblogging service similar to Twitter. Users share short messages called ``toots'', which they can favorite, reply to, and ``boost'' (an analog to Twitter's retweet functionality). Mastodon does not have the recommendation features that Twitter has (i.e. ``who to follow'' suggestions), but recent work has shown that implementing recommender systems on top of Mastodon is possible \cite{trienes2018recommending}. Like Twitter, Mastodon is primarily developed by a centralized team. However, Mastodon's software is open source.
 
-The difference between Mastodon and Twitter (or any other social network) is the radical nature in which its communities and administrative privileges are distributed. Mastodon is made up of many interconnected servers, and when a user joins Mastodon they choose a specific server to join (although they can migrate their content to accounts on other servers later if they so choose). In general, there is nothing {\itshape a priori} stopping a user on one server from interacting with a user on another server. Moreover, the developers of Mastodon hold none of the administrative privileges. Instead, the parties who run each individual mastodon server has administrative priveleges over what goes on on that server, including who is allowed to join and who is allowed to see posts on the server. 
+The difference between Mastodon and Twitter (or any other social network) is the radical nature in which its communities and administrative privileges are distributed. Mastodon is made up of many interconnected servers, each hosted by an individual or party who need not be connected to the developers of Mastodon, and when a user joins Mastodon they choose a specific server to join (although they can migrate their content to accounts on other servers later if they so choose). In general, there is nothing stopping a user on one server from interacting with a user on another server {\itshape a priori}. Moreover, the developers of Mastodon hold none of the administrative privileges. Instead, the parties who run each individual mastodon server has administrative priveleges over what goes on on that server, including who is allowed to join and who is allowed to see posts on the server. In this way, Mastodon is decentralized with respect to its distribution of administrative privileges and its distribution of server-hosting responsibility.
 
-This naturally allows for a framework by which communities can create social friction around themselves. Specifically, each server is free to set their own guidelines on who is allowed to enter. These guidelines can be social (e.g. community members discuss whether or not they want to let the outsider in), technological (e.g. a user is let into the server for a town's political discussion if they can provide a crpytographic proof of their residence in the town), or a mix of both. 
+This naturally allows for a framework by which communities can create social friction around themselves. Specifically, each server is free to set their own guidelines on who is allowed to enter. These guidelines can be social (e.g. community members discuss whether or not they want to let the outsider in), technological (e.g. a user is let into the server for that residents of a town use to talk local politics if they can provide a crpytographic proof of their residence in the town), or a mix of both. 
 
 Letting communities set their own security and membership guidelines has another advantage: it reduces the scalability of attacks. Any bot-detection algorithm implemented by an open social network like twitter will have the drawback that an any successful evasion of the algorithm will scale quite well. That is to say, since all communities on twitter are uniform with regards to their protection under a bot-detection algorithm, a strategy for evading the algorithm in one community will also work in any other community. In contrast, letting every decentralized server create their own membership requirements is a security strategy that will not lend itself well to wide-scale attacks. Since each server is encouraged to customize their membership requirements, an attack that works well on one server is by no means guaranteed to work on any other server. This is an important advantage because it greatly reduces the economic efficiency of any potential attack. Moreover, since under our model the development privileges are still centralized, the developers of a system like Mastodon could still create a bot-detection algorithm and let servers adopt it for an extra layer of security.
+
+We do not mean to suggest that Mastodon in particular needs to become the center of research or development efforts centered around social friction -- only that its operational model has many potentially positive qualities with regard to enabling high-quality deliberation.
 
 \section{overlaying friction on other social networks}
 
@@ -156,7 +159,7 @@ A fitting analog might be the idea of Deliberative Democracy first proposed by F
 
 \section{a taxonomy of social networks}
 
-In order to better understand the axes along which various social networks are centralized or decentralized, we have created the following taxonomy (\ref{tab:taxonomy}).
+In order to better understand the axes along which various social networks are centralized or decentralized, we have taxonomized several popular social networks  (Table \ref{tab:taxonomy}).
 
 %%% Link to taxonomy in my google drive : https://docs.google.com/spreadsheets/d/1Q9rg_i6YAEYkcFf2JBfe5wJIKaecT4_MpXmSPnUIFSE/edit#gid=0
 
@@ -180,11 +183,25 @@ In order to better understand the axes along which various social networks are c
 
 Of these networks, three have decentralized administrative privileges (Reddit, Slack/Discord, and Mastodon), and of those three only Mastodon is decentralized with regards to community hosting. But without decentralized community hosting, administrative privileges cannot be truly decentralized, since the power given to administrators can still be altered by the central entity who hosts all the communities. For example, there is nothing stopping Reddit from changing its policy on subreddit administration and transferring some moderator power to a centralized in-house team.
 
-We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an innapropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
+We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an inappropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
 
-We hypothesize that the centralization or decentralization of a network's administrative privileges and hosting ability has a profound impact on the way information flows in that network and the amount of social friction communities can are able create around themselves. Moreover, 
+\section{Future Work}
 
+We hypothesize that the centralization or decentralization of a network's administrative privileges and hosting ability has a profound impact on the way information flows in that network and the amount of social friction communities can are able create around themselves. Moreover, we hypothesize that allowing communities to establish social friction around themselves.
 
+Our future work will have two main goals: to validate our hypothesis that increased social friction can benefit communities involved in political discussions, and to design technological mechanisms that will enable communities to create social friction around themselves in online spaces. 
+
+To test our hypothesis on the effectiveness of social friction, we will conduct studies that measure the quality of conversations across online communities that exhibit various amounts of social friction. One promising set of communities to examine are Reddit's ``subreddits'', many online communities each with their own sets of rules.
+
+On the technological side, we have begun to design a privacy-preserving cryptographic protocol which uses zero-knowledge proofs \cite{goldreich1991proofs} to allow agents to show that certain facts about their average location over time. Such a system could be used to let users create online communities for discussions germane to a certain geographic area where only the residents of that geographic area can participate, while still respecting the privacy of all participants.
+
+\section{Conclusion}
+
+We have presented a new viewpoint on security that seeks to question the de-facto acceptance of the internet's openness. We suggest that in certain scenarios, the openness of the internet has the potential to do more harm than good, and that this argument is supported by recent events in American politics. To further support that hypothesis, we define the notion of social friction and consider the ways in which it can be seen as a tool that communities can use to provide security for themselves. We examine the structures of different social networks, creating a taxonomy along which different networks are classified according to how they distribute development, administrative, and hosting responsibilities. We hypothesize that networks with decentralized administrative and hosting responsibilities are more likely to support communities guarded by social friction, and hypothesize that such communities will be more conducive to high quality discussion. Our goal is to validate those hypothesis via experimental evidence, and to design technological mechanisms that will enable social friction.
+
+\begin{acks}
+The authors would like to thank Emma Hanlon and Gabriel Eisen for helpful discussions about Sociology and Anthropology.
+\end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{bibliography}
