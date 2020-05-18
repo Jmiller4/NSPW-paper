@@ -104,7 +104,11 @@ Abstract goes here.
 
 \section{Introduction}
 
-Introduction goes here.
+\section{Related work}
+
+
+
+Morris {\itshape et al} \cite{morris2002schmooze} use the term ``social friction'' in a manner similar to ours in a study examining the extent to which introductory phone calls eased awkwardness in email negotiations between two parties who did not previously know each other. 
 
 \section{Social Friction}
 
@@ -112,7 +116,7 @@ Introduction goes here.
 
 We use the term {\itshape social friction} to describe the natural barriers to entry an individual may face when joining a community. If the community is a group of friends, a newcomer seeking to join the friend group will need to gain the trust of the group before they are accepted. If the community is a town, a newcomer must buy or rent property in that town to be considered a resident. If the community is a family, then a newcomer must marry a family member (or be born of a family member) to be considered a member of that family. In each of these scenarios, a newcomer to the community needs to meet certain criteria (accruing trust, buying property, courtship and marriage) before they can attain community membership. We use the term {\itshape social friction} to describe the challenges encountered in meeting those criteria. 
 
-Social friction is related to the concepts of \textit{social barriers} and \textit{rites of passage} from Anthropology and Sociology. {\itshape Social barriers} are used broadly in the literature to describe non-technological hindrances that make it more difficult for an individual or group to complete an action, whether that action be joining a social movement \cite{klandermans1987potentials}, visiting a city park \cite{cutts2009city}, accepting a new energy source\cite{pasqualetti2011social}, or achieving economic empowerment\cite{woolcock2000removing}. The varied contexts in which the idea of a social barrier appears highlight a key difference between that term and our idea of social friction: that of scope. A social barrier can refer to a broad set of phenomena, whereas social friction is more specific. In fact, one could think of social friction as the specific social barriers that hinder an individual from joining a community (rather than, say, accepting a new energy source). 
+Social friction is related to the concepts of \textit{social barriers} and \textit{rites of passage} from Anthropology and Sociology. {\itshape Social barriers} are used broadly in the literature to describe non-technological hindrances that make it more difficult for an individual or group to complete an action, whether that action be joining a social movement \cite{klandermans1987potentials}, visiting a city park \cite{cutts2009city}, accepting a new energy source\cite{pasqualetti2011social}, or achieving economic empowerment\cite{woolcock2000removing}. The varied contexts in which the idea of a social barrier appears highlight a key difference between that term and our idea of social friction: scope. A social barrier can refer to a broad set of phenomena, whereas social friction is more specific. In fact, one could think of social friction as the specific social barriers that hinder an individual from joining a community (rather than, say, accepting a new energy source). 
 
 We also seek to distinguish the idea of social friction from the idea of social barriers in an attitudinal sense \textit{(NOTE: there has got to be a better word than ``attitudinal'' to use here...)}. In the papers we encountered during our literature review, a social barrier was always framed by the authors as something negative that should be torn down if possible, and with good reason -- many of these social barriers did indeed stand in the way of positive changes. But we do not see social friction as an inherently negative phenomenon. In fact, social friction is beneficial to communities in so far as it provides a natural vetting process against potentially malicious outsiders. Imagine, for example, if any stranger could walk into your house and announce themselves as a new member of your family -- you may have some doubts about that stranger's intentions. Social friction (manifesting here as the requirement that this stranger gain the trust and love of an unmarried family member before joining the family) is what keeps such a thing from happening. 
 
@@ -149,6 +153,18 @@ Letting communities set their own security and membership guidelines has another
 
 We do not mean to suggest that Mastodon in particular needs to become the center of research or development efforts centered around social friction -- only that its operational model has many potentially positive qualities with regard to enabling high-quality deliberation.
 
+\section{Nextdoor}
+
+Given that we propose geographically-based communities as a main use-case for the idea of social friction, we now briefly discuss Nextdoor, a social network site tailored for individual neighborhoods.
+
+Nextdoor is a popular current social networking site where users join neighborhood-specific communities. In order to join one such community, a user must either send Nextdoor a picture of their driver's license or enter a code on a postcard mailed to their address. In this way, Nextdoor centralizes an important administrative privilege (the power to decide who can join a neighborhood's network), although power users can gain some smaller administrative privileges. Unlike Mastodon, Nextdoor also centralizes hosting responsibility.
+
+Masden {\itshape et al} conducted interviews with 13 Nextdoor users across various neighborhoods in a metropolitan area and found that participants reported strong community engagement and ``a lack of divisive or combative content'' on the platform, however they also reported that privacy concerns and disagreements about the boundaries of specific neighborhoods were a cause for tension \cite{masden2014tensions}. We are heartened by Masden's positive findings, and feel that participants' anxieties about privacy and neighborhood boundaries could largely be mollified in a decentralized system that offered increased privacy protections (partially possible due to a reduced need to please advertisers) and the ability for self-sovereign communities to change their boundaries over time, rather than having those boundaries controlled by a centralized source.
+
+On the other hand, Kurwa conducted an exploratory analysis in which he found that Nexdoor ``has become an important platform for the surveillance and policing of race in residential space '' \cite{kurwa2019building}. \textit{(NOTE: not sure what to say about this yet. It does feel important to mention.)}
+
+We also note that the entry requirements Nextdoor places on its users are perhaps at the upper bound of how strict a community could be about its entrance -- in the world of social friction, these entry requirements may be analogous to very course sandpaper. We imagine a network of communities in which each community is free to define its own membership requirements, and for a geographically-based community, those membership requirements could be a proof of residence or something more lenient. For example, an online community centered around a town may allow people from that town as well as neighboring towns to join, or it might allow past residents to join, or residents from a neighboring town that at least $n$ residents can vouch for, etc. In general, we seek a system that is more flexible than what Nextdoor provides. The fact that Nextdoor is centralized with respect to  
+
 \section{overlaying friction on other social networks}
 
 The idea of social friction can also be used to build overlays on other social networks. For example, one could imagine a tool that lets Twitter users define their own metric of trust relative to another user (e.g. number of followers in common, distance away in the follow graph, etc) and augments the user's twitter feed by only showing the user tweets from other users who attain a threshold trust score, under whatever metric the user defines. Since each user is free to customize their own metric of trust, we gain an advantage from decentralization similar to the advantage gained by letting each individual Mastodon server set its own membership rules. That is to say, for users Alice and Bob, a strategy that lets an attacker many bots that can unfairly gain Alice's trust will not necessarily succeed in creating bots that can unfairly gain Bob's trust.
@@ -176,6 +192,7 @@ In order to better understand the axes along which various social networks are c
     Slack/ discord & Centralized & Decentralized & Centralized \\
     Group Chats & Centralized & N/A -- no one has administrative privileges & Centralized \\
     Mastodon & Decentralized (open source) & Decentralized & Decentralized\\
+    Nextdoor & Centralized & Semi-centralized: power users can gain some administrative privileges & Centralized \\
     Blockchain Apps & Decentralized (open source) & N/A -- application-dependent & Decentralized\\
     \bottomrule
   \end{tabularx}
@@ -187,7 +204,7 @@ We can also see the ``report'' functions on Twitter and Facebook (via which anyo
 
 \section{Future Work}
 
-We hypothesize that the centralization or decentralization of a network's administrative privileges and hosting ability has a profound impact on the way information flows in that network and the amount of social friction communities can are able create around themselves. Moreover, we hypothesize that allowing communities to establish social friction around themselves.
+We hypothesize that the centralization or decentralization of a network's administrative privileges and hosting ability has a profound impact on the way information flows in that network and the amount of social friction communities can are able create around themselves. Moreover, we hypothesize that allowing communities to establish social friction around themselves will lead to richer and more productive deliberatory experiences inside said communities.
 
 Our future work will have two main goals: to validate our hypothesis that increased social friction can benefit communities involved in political discussions, and to design technological mechanisms that will enable communities to create social friction around themselves in online spaces. 
 
@@ -199,9 +216,9 @@ On the technological side, we have begun to design a privacy-preserving cryptogr
 
 We have presented a new viewpoint on security that seeks to question the de-facto acceptance of the internet's openness. We suggest that in certain scenarios, the openness of the internet has the potential to do more harm than good, and that this argument is supported by recent events in American politics. To further support that hypothesis, we define the notion of social friction and consider the ways in which it can be seen as a tool that communities can use to provide security for themselves. We examine the structures of different social networks, creating a taxonomy along which different networks are classified according to how they distribute development, administrative, and hosting responsibilities. We hypothesize that networks with decentralized administrative and hosting responsibilities are more likely to support communities guarded by social friction, and hypothesize that such communities will be more conducive to high quality discussion. Our goal is to validate those hypothesis via experimental evidence, and to design technological mechanisms that will enable social friction.
 
-\begin{acks}
-The authors would like to thank Emma Hanlon and Gabriel Eisen for helpful discussions about Sociology and Anthropology.
-\end{acks}
+% \begin{acks}
+% The authors would like to thank Emma Hanlon and Gabriel Eisen for helpful discussions about Sociology and Anthropology.
+% \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{bibliography}
