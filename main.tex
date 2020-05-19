@@ -1,6 +1,8 @@
 \documentclass[sigconf,authordraft]{acmart}
 \usepackage{tabularx}
 
+\newcommand{\etal}{{\itshape et al}}
+
 % \documentclass[sigconf,authordraft]{acmart} gives same document but with line numbers and "unpublished draft" watermark across whole page
 
 %%%% Proceedings format for SIGPLAN conferences 
@@ -113,11 +115,15 @@ OUTLINE:
 
 \section{Introduction}
 
-% \cite{boshmaf2013design, kramer2014experimental, wu2013detecting, messias2013you, benkler2018network, bessi2016social}
 
-% Social networks 
+Much recent popular discourse has focused on the threats that {\itshape bots} (automated or semi-automated social media accounts) pose to healthy discussion on social media networks. Boshmaf \etal found that Facebook was quite vulnerable to large-scale infiltration by botnets and created a botnet capable of befriending up to 80 percent of targeted users \cite{boshmaf2013design}, leading to serious privacy and security concerns. On twitter, Messias \etal show that botnets can game the microblogging service to artificially raise the influence of some users \cite{messias2013you}. Meanwhile, experimental evidence shows that emotional states spread within social networks \cite{kramer2014experimental}, which in turn suggests that botnets which gain access to large swaths of a network can influence the emotions of real users through the spread of inflammatory content. 
 
-% Social networks are used to radicalize people to terrorist organizations \cite{o2007virtual,Torok2016SocialMA}.
+In the American political and media landscape, much attention has been given to the role of bots, propaganda, and foreign influence in the 2016 presidential election. Between election day and January 2018, Twitter found 50,258 bot accounts which tweeted political content during the election period and were linked to foreign actors \cite{Twitter2016BotReport}. In the same vein, an investigation by United States special counsel Robert Mueller found that foreign actors sought to influence the outcome of the election, partially through various social media campaigns \cite{mueller2019report}, and Bessi \etal used the bot-detection program {\itshape BotOrNot} \cite{davis2016botornot} to estimate that bots accounted for around one fifth of generated content in the political discussion leading up to the 2016 election \cite{bessi2016social}. Several other studies have also evidence that bot activity and propaganda significantly effected social media discussions in advance of the 2016 election \cite{howard2017junk, badawy2018analyzing, woolley2017computational}.
+
+However, the notion of human or automated accounts spreading propaganda via social media is not unique to the 2016 election: countries around the world deploy ``cyber troops'' to influence online discussions \cite{bradshaw2017troops}. Nor is the strategy of using bots to astroturf new to the 2016 election: Ratkiewicz \etal find that botnets were used to spread political content in advance of the 2010 US Midterm elections as well \cite{ratkiewicz2011truthy}.
+
+Misuse of social media tools can also lead to the unraveling of social movements. Writing of the 2011-2012 Indignados protests in Spain \cite{indignadosBBC}, Rone finds that trolling behavior, the hijacking of social media accounts, the manipulation of voting systems, and the creation of fake accounts to infiltrate closed groups were all significant factors contributing to the dissolution of the movement \cite{rone2019fake}. Social networks have also been used to radicalize people to terrorist organizations \cite{o2007virtual,Torok2016SocialMA}. All in all, social media has become a hotbed for manipulation and disinformation \cite{benkler2018network}
+
 
 % \section{Related work}
 % Morris {\itshape et al} \cite{morris2002schmooze} use the term ``social friction'' in a manner similar to ours in a study examining the extent to which introductory phone calls eased awkwardness in email negotiations between two parties who did not previously know each other. 
