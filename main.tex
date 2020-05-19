@@ -167,7 +167,7 @@ Overall, we worry that in the context of social media, and more specifically in 
 Accordingly, we propose that introducing friction to online communities, specifically communities centered around politics or otherwise sensitive topics, could be an effective way to combat bad-faith behavior, whether that behavior be Sybil attacks, intrusions from unwanted cyber-troops, or unauthorized data collection. Instead of letting an arbitrary number of bad actors enter online spaces and then trying to weed them out, we propose a framework under which those bad actors are kept from joining online spaces in the first place. In the following sections, we examine existing social networks to understand what which of their qualities could contribute positively to such a framework.
 
 
-\section{Qualities of networks that support social friction}
+\section{Network structure and of social friction}
 
 \subsection{Mastodon and Distributed Administration/ Community Hosting}
 
@@ -199,13 +199,26 @@ In section 7, we also outline future work to leverage cryptography (specifically
 
 Overall, although some research Nextdoor is hopeful with regards to the discursive environments of geographically-centered online networks, we ultimately seek a system with more flexibility than what Nextdoor provides. Furthermore, we note that Nextdoor's centralization of administrative capability is likely a factor contributing to its inflexibility of entrance requirements across communities -- for a centralized team, it is much more economical to create one set of entrance requirements that can be applied in any context.
 
-\section{overlaying friction on other social networks}
+\section{Practical considerations}
 
-The idea of social friction can also be used to build overlays on other social networks. For example, one could imagine a tool that lets Twitter users define their own metric of trust relative to another user (e.g. number of followers in common, distance away in the follow graph, etc) and augments the user's twitter feed by only showing the user tweets from other users who attain a threshold trust score, under whatever metric the user defines. Since each user is free to customize their own metric of trust, we gain an advantage from decentralization similar to the advantage gained by letting each individual Mastodon server set its own membership rules. That is to say, for users Alice and Bob, a strategy that lets an attacker many bots that can unfairly gain Alice's trust will not necessarily succeed in creating bots that can unfairly gain Bob's trust.
+\subsection{Overlaying friction on other networks}
 
-But we also note that it might not be appropriate to incorporate the idea of social friction into every online network. Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. Importantly, in the context of political discussion, we do not necessarily wish to create communities that are divided along political lines, but communities free of bad-faith outsiders who wish to sway the conversation in one direction or another. 
+The idea of social friction can also be used to build overlays on other social networks. For example, one could imagine a tool that lets Twitter users define their own metric of trust relative to another user (e.g. number of followers in common, distance away in the follow graph, etc) and augments the user's twitter feed by only showing the user tweets from other users who attain a threshold trust score, under whatever metric the user defines. Since each user is free to customize their own metric of trust, we gain an advantage from decentralization similar to the advantage gained by letting each individual Mastodon server set its own membership rules. That is to say, for users Alice and Bob with different trust metrics, a strategy that lets an attacker create many bots that can gain Alice's trust will not necessarily succeed in creating bots that can unfairly gain Bob's trust.
 
-A fitting analog might be the idea of Deliberative Democracy first proposed by Fiskin \cite{fishkin1991democracy}, which has manifested most recently in the America in One Room project \cite{AmericaInOneRoom}. This project saw Americans from all walks of life invited to a central location in Texas where they debated topics germane to American politics topics with each other. The organizers of this event did not seek to exclusively invite participants with a specific political orientation, but they {\itshape did} seek to only invite participants who were from America, given that the event was centered around debating American politics. In the same way, our hope is that online deliberation platforms can use social friction to keep out bad-faith outsiders while still allowing for healthy political debate.
+We also note that it might not be appropriate to incorporate the idea of social friction into every online network. In many scenarios, the ability to receive information from a previously unknown or untrusted source should be seen as a net positive. However, the network effects \cite{katz1994systems} exhibited by large social networks mean that wide-scale adoption of other platforms might be difficult or slow, which makes the overlaying of friction on existing platforms a potentially appealing compromise.  
+
+\subsection{Filter bubbles and echo chambers}
+
+We also wish to address the concern that creating communities with social friction could lead to filter bubbles \cite{pariser2011filter} or ideological echo chambers. 
+
+Importantly, in the context of political discussion, we do not necessarily wish to create communities that are divided along political lines, but communities free of bad-faith outsiders who wish to sway the conversation in one direction or another. 
+
+A fitting analog might be the idea of Deliberative Democracy first proposed by Fiskin \cite{fishkin1991democracy}, which has manifested most recently in the America in One Room project \cite{AmericaInOneRoom}. This project saw Americans from all walks of life invited to a central location in Texas where they debated topics germane to American politics topics with each other. The organizers of this event did not seek to exclusively invite participants with a specific political orientation, but they {\itshape did} seek to only invite participants who were from America, given that the event was centered around debating American politics. In the same way, our hope is that online deliberation platforms can use social friction to keep out bad-faith outsiders while still allowing for healthy and ideologically diverse debate.
+
+Furthermore, we note that if we were able to build such an online community, its ideological diversity (assuming diversity of the underlying population) could make it {\itshape less} of an echo chamber than current sub-communities of popular social networking cites, which have been found to exhibit filter bubble-like properties \cite{pariser2011filter}.
+
+% Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. 
+
 
 \section{a taxonomy of social networks}
 
