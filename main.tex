@@ -167,6 +167,7 @@ happening in contemporary online discourse is wreaking significant havoc for soc
 effectively coordinate and regulate some semblance of a shared truth.
 
 \subsection{Online disinformation}
+\label{sec:online_disinformation}
 
 Academically grounded concerns about online media's use as a tool for manipulation date at least as
 early as 1988 \cite{herman2010manufacturing}, and concerns about {\itshape social} media's use for
@@ -200,17 +201,17 @@ anthropological and sociological understanding of human coordination and communi
 The rest of the paper proceeds as follows:
 
 \begin{itemize}
-\item In Section 2, we define the notion of \textit{social friction}, show its connections to
+\item In Section ~\ref{sec:social_friction}, we define the notion of \textit{social friction}, show its connections to
 anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted
 outsiders from joining social groups.
-\item In Section 3, we examine the ways in which social friction manifests itself on the internet,
+\item In Section ~\ref{sec:friction_internet}, we examine the ways in which social friction manifests itself on the internet,
 critically analyze the effect that mainstream perceptions of the internet have had on the ability of
 bad-faith actors to spread propaganda and disinformation, and propose that building networks with
 more social friction could mollify some of these problems.
-\item In Section 4, we discuss two already-existing social networks, Mastodon and Nextdoor, which
+\item In Section ~\ref{sec:network_structure}, we discuss two already-existing social networks, Mastodon and Nextdoor, which
 each satisfy some of the desiderata we see as integral to our model of social friction in online
 spaces.
-\item In Section 5, we propose a taxonomy of social network platforms based on their frictive
+\item In Section ~\ref{sec:futurework}, we propose a taxonomy of social network platforms based on their frictive
 properties, and propose research directions predicated on exploring the concept of social friction
 in social media.
 \item In Section~\ref{sec:concl}, we provide a brief conclusion.
@@ -222,7 +223,7 @@ in social media.
 % Morris {\itshape et al} \cite{morris2002schmooze} use the term ``social friction'' in a manner similar to ours in a study examining the extent to which introductory phone calls eased awkwardness in email negotiations between two parties who did not previously know each other. 
 
 \section{Social Friction}
-
+\label{sec:social_friction}
 % \textit{(
 % NOTE: when I started doing the lit review for this paper, my main goal with this section was to give social friction a grounding in sociology/anthropology that gave it more credibility. I haven't been able to find any literature that exactly mapped to the concept. I suppose that this section seeks to justify the introduction of ``social friction'' as a new term instead, while still showing its connections to the humanities)}
 
@@ -238,7 +239,8 @@ We also seek to distinguish the idea of social friction from the idea of social 
 One can see social friction as a mechanism through which communities can provide security for themselves -- a tool wielded by community members to make sure that only people they trust join the community. Specific communities can, either consciously or subconsciously, calibrate the amount of social friction they surround themselves with to their own specifications. In fact, one can notice that the amount of social friction surrounding a community is often correlated with the amount of harm that an unwanted community member could cause: attending an academic talk from a visiting lecturer is a process with relatively little friction, whereas joining a family is a high-friction process. If we consider social friction as a source of security for communities, this correlation makes perfect sense: it is natural to put more effort into protecting something that is more valuable.
 
 \section{Friction on the internet?}
-\label{sec:friction}
+\label{sec:friction_internet}
+
 
 In our view, the design of popular social networks encourages the formation of communities surrounded by very little friction. Any Twitter account can tweet at any other account, as long as both are public. Facebook friend requests are often accepted with relative ease in comparison to the effort involved in forming an offline friendship \cite{rashtian2014befriend}, and the same could be said of acceptance into Facebook groups \cite{park2009being}. 
 
@@ -250,7 +252,7 @@ Most research on bot detection and Sybil attack defense in the context of social
 The nature of these approaches aside, the presence of bots is not the only factor contributing to the political disarray of most social networks anyways: real humans (``cyber troops'') can also take up the task of spreading disinformation and propaganda, sometimes for pay \cite{bradshaw2017troops}. Also problematic are the data collection practices of firms that use personal data to create targeted political messaging. The American public's negative response to such practices are perhaps best exemplified in the Facebook-Cambridge Analytica scandal \cite{CambridgeAnalyticaNYT}. Neither of these transgressions can be classified as Sybil attacks, but both of them involve bad-faith actors either giving (in the case of cyber troops) or taking (in the case of data collection) information to/from a user in a way that is not necessarily respectful of the user's views or in the spirit of healthy discourse. In both cases, the relative openness of online spaces is what allows these transgressions to occur.
 
 
-At the end of the previous section, we noted an anecdotal correlation between the amount of social friction surrounding a real-world community and relative harm a malicious outsider could do to that community, were they able to gain membership. Given the turmoil caused by digital interference in social networks (see Section 1.1) and the way that social networks influence political decisions with material consequences, it would appear that many online communities do not adhere to this trend -- that is to say, they have low social friction, but unwanted actors who enter can cause a lot of harm. 
+At the end of the previous section, we noted an anecdotal correlation between the amount of social friction surrounding a real-world community and relative harm a malicious outsider could do to that community, were they able to gain membership. Given the turmoil caused by digital interference in social networks (see Section ~\ref{sec:online_disinformation}) and the way that social networks influence political decisions with material consequences, it would appear that many online communities do not adhere to this trend -- that is to say, they have low social friction, but unwanted actors who enter can cause a lot of harm. 
 
 Overall, we worry that in the context of social media, and more specifically in the context of political discussions on social media, the prioritization of the openness of the internet has allowed for more harm than good. Specifically, the ability of any user to receive incoming information from any other source has been abused by malicious parties who inundate regular users with so much bad-faith information that distinguishing between the good from the bad is all but impossible. A recent Pew Research study supports this claim -- the survey found that only 40 percent of respondents felt somewhat confident they could recognize a bot account on social media, and only 7 percent were very confident they could \cite{PewBotStudy}. But again, bots are not even the whole picture -- real users can also spread disinformation and agitation. Anthropological research suggests that humans cannot keeps track of more than (around) 150 relationships at a time \cite{zhou2005discrete}, which further suggests that social media users simply do not have the mental capacity to maintain detailed trust information about all the accounts they know about online, be they bot or human. Moreover, foundational research on Sybil attacks shows that reactive approaches are far less effective than approaches that gate who can enter the community, except under exceedingly rare circumstances \cite{douceur2002sybil}.
 
@@ -258,10 +260,12 @@ All of this evidence suggests that in certain situations it could be useful or e
 
 
 \section{Network structure and social friction}
+\label{sec:network_structure}
 
 In this section we analyze two existing social networks, Mastodon and Nextdoor, and discuss some of their structural elements which we feel would be conducive to incorporating social friction into online spaces for improved security.
 
 \subsection{Mastodon and distributed administration/ community Hosting}
+\label{sec:mastodon}
 
 Mastodon\footnote{\url{https://joinmastodon.org/}} is microblogging service similar to Twitter. Users share short messages called ``toots'' (an analog to Tweets) which they can favorite, reply to, and ``boost'' (an analog to Twitter's retweet functionality). Mastodon does not have the recommendation features that Twitter has (i.e. ``who to follow'' suggestions), but recent work has shown that implementing recommender systems on top of Mastodon is possible \cite{trienes2018recommending}. Like Twitter, Mastodon is primarily developed by a centralized team. However, Mastodon's software is open source.
 
@@ -276,6 +280,7 @@ Lastly, we note that letting the developers of a social media network hold admin
 We do not mean to bring up Mastodon in order to suggest that it needs to become the center of research or development efforts centered around social friction in particular, but only to suggest that its operational model, and specifically its decentralization of administration and hosting responsibilities, has many potentially positive qualities with regard to enabling communities to provide themselves with increased security.
 
 \subsection{Nextdoor and location-specific networks}
+\label{sec:nextdoor}
 
 Given that we propose geographically-based online communities as a main use-case for the idea of social friction, we now discuss  Nextdoor\footnote{\url{https://nextdoor.com/}}, a social networking platform tailored to individual neighborhoods. We examine the security Nextdoor provides to its users and review academic work on the quality of its communities.
 
@@ -288,12 +293,12 @@ Payne also critiques the rigid geographic boundaries imposed by Nextdoor \cite{p
 
 On the other hand, Kurwa conducted an exploratory analysis in which he found that Nexdoor ``has
 become an important platform for the surveillance and policing of race in residential space''
-\cite{kurwa2019building}. In Section~\ref{sec:crypto}, we outline future work to better understand
+\cite{kurwa2019building}. In Section~\ref{sec:nextdoor_futurework}, we outline future work to better understand
 this phenomenon and the extent to which it is endemic to neighborhood-specific online communities.
 
 We also note that the entry requirements Nextdoor places on its users are perhaps at the upper bound of how strict a community could be about its entrance requirements -- in the world of social friction, these requirements may be analogous to very coarse sandpaper. We imagine a network of communities in which each community is free to define its own membership requirements, and for a geographically-based community, those membership requirements could be a proof of residence, but they could also be something more lenient. For example, an online community centered around a town may allow people from that town as well as neighboring towns to join, or it might allow past residents to join, or residents from a neighboring town that at least $n$ residents can vouch for, etc. 
 
-In section 5, we also outline future work to leverage cryptography (specifically zero-knowledge proofs) to allow users to make statements like ``I spend at least 50 percent of my time in this town'', which could be used as inputs into a community's scheme of entrance requirements. Zero-knowledge proofs of statements like this could be especially useful with respect to more complicated geographic situations where a user's place of residence does not necessarily reflect the entire scope of their political interests. For example, one could imagine a situation where many people live in area $A$ but commute to area $B$ for work -- perhaps these people should have a say in discussions about the economic policies of area $B$. Nextdoor does not support this type of fine grained and community-specific specialization of entrance requirements.
+In section ~\ref{sec:crypto}, we also outline future work to leverage cryptography (specifically zero-knowledge proofs) to allow users to make statements like ``I spend at least 50 percent of my time in this town'', which could be used as inputs into a community's scheme of entrance requirements. Zero-knowledge proofs of statements like this could be especially useful with respect to more complicated geographic situations where a user's place of residence does not necessarily reflect the entire scope of their political interests. For example, one could imagine a situation where many people live in area $A$ but commute to area $B$ for work -- perhaps these people should have a say in discussions about the economic policies of area $B$. Nextdoor does not support this type of fine grained and community-specific specialization of entrance requirements.
 
 Overall, although some research Nextdoor is hopeful with regards to the discursive environments of geographically-centered online networks, we ultimately seek a system with more flexibility than what Nextdoor provides. Furthermore, we note that Nextdoor's centralization of administrative capability is likely a factor contributing to its inflexibility of entrance requirements across communities -- for a centralized team, it is much more economical to create one set of entrance requirements that can be applied in any context.
 
@@ -330,6 +335,7 @@ Overall, although some research Nextdoor is hopeful with regards to the discursi
 
 
 \section{Research Directions}
+\label{sec:futurework}
 
 In this paper, we have hypothesized that enabling communities to establish social friction around themselves will increase security and lead to richer and more productive deliberatory experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. 
 
@@ -369,8 +375,9 @@ This taxonomy is useful in guiding plans for future work, but we also note that 
 To test our hypothesis on the effectiveness of social friction, we will conduct studies that measure the quality of conversations across online communities that exhibit various amounts of social friction. One promising set of communities to examine are Reddit's ``subreddits'', many online communities each with their own sets of rules (a property made possible by Reddit's distribution of administrative privileges). By using sentiment analysis to measure the nature of conversations, we can compare trends across different subreddits with different entrance requirements and codes of conduct, and explore the extent to which these factors correlate with better conversations.
 
 \subsection{Examining Nextdoor}
+\label{sec:nextdoor_futurework}
 
-Nextdoor is of particular interest to us. It would appear that very little academic literature has examined Nextdoor: in our literature review, we were only able to find three papers \cite{masden2014tensions, kurwa2019building, payne2017welcome}, all of which were discussed in section 4.2. Importantly, Masden \etal's interviews and Kurwa's analysis paint very different pictures of Nextdoor communities, with Masden \etal suggesting that Nextdoor can be a positive force for communities \cite{masden2014tensions} and Kurwa arguing that Nextdoor can be abused as a tool for discriminatory surveillance \cite{kurwa2019building}. We hope to conduct more interviews to better understand the ways in which different communities use Nextdoor, the harms that can arise out of its misuse, and the extent to which those harms are endemic to location-specific online communities.
+Nextdoor is of particular interest to us. It would appear that very little academic literature has examined Nextdoor: in our literature review, we were only able to find three papers \cite{masden2014tensions, kurwa2019building, payne2017welcome}, all of which were discussed in section ~\ref{sec:nextdoor}. Importantly, Masden \etal's interviews and Kurwa's analysis paint very different pictures of Nextdoor communities, with Masden \etal suggesting that Nextdoor can be a positive force for communities \cite{masden2014tensions} and Kurwa arguing that Nextdoor can be abused as a tool for discriminatory surveillance \cite{kurwa2019building}. We hope to conduct more interviews to better understand the ways in which different communities use Nextdoor, the harms that can arise out of its misuse, and the extent to which those harms are endemic to location-specific online communities.
 
 \subsection{Overlaying friction on other networks}
 
