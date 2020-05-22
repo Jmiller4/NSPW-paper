@@ -161,10 +161,13 @@ It would be outlandish to argue that these economies of scale are anything besid
 for the people who can take advantage of them. However, they are not without their downsides. Most
 obvious is the shift toward a more centralized mass media and communications infrastructure: in the
 modern advertising-driven information economy, control over things like local media have arguably
-become more centralized than they have been since the invention of the printing press. Additionally,
-while disinformation and information warfare have existed for quite some time, the manipulation
-happening in contemporary online discourse is wreaking significant havoc for society's ability to
-effectively coordinate and regulate some semblance of a shared truth.
+become more centralized than they have been since the invention of the printing press. From a
+security standpoint, this centralization has led to what Schneier calls ``feudal security'' - end
+users trading their data and their self determination for the protection of the Internet
+giants~\cite{schneier_when_2012}. Additionally, while disinformation and information warfare have
+existed for quite some time, the manipulation happening in contemporary online discourse is wreaking
+significant havoc for society's ability to effectively coordinate and regulate some semblance of a
+shared truth.
 
 \subsection{Online disinformation}
 \label{sec:online_disinformation}
@@ -268,9 +271,9 @@ In this section we analyze two existing social networks, Mastodon and Nextdoor, 
 
 Mastodon\footnote{\url{https://joinmastodon.org/}} is microblogging service similar to Twitter. Users share short messages called ``toots'' (an analog to Tweets) which they can favorite, reply to, and ``boost'' (an analog to Twitter's retweet functionality). Mastodon does not have the recommendation features that Twitter has (i.e. ``who to follow'' suggestions), but recent work has shown that implementing recommender systems on top of Mastodon is possible \cite{trienes2018recommending}. Like Twitter, Mastodon is primarily developed by a centralized team. However, Mastodon's software is open source.
 
-The major difference between Mastodon and Twitter (and most other social networks) is the nature in which its communities and administrative privileges are distributed. Mastodon is made up of many interconnected servers, each hosted by an individual or party who need not be connected to the developers of Mastodon, and when a user joins Mastodon they choose a specific server to join (although they can migrate their content to an account on another server later if they so choose), and in general, there is nothing stopping a user on one server from interacting with a user on another server {\itshape a priori}. Moreover, the developers of Mastodon hold none of the administrative privileges. Instead, the parties who run each individual mastodon server have administrative priveleges over what goes on on their server, including power over who is allowed to join and who is allowed to see posts from users on that server. In this way, Mastodon is decentralized with respect to its distribution of administrative privileges and its distribution of community-hosting responsibility.
+The major difference between Mastodon and Twitter (and most other social networks) is the nature in which its communities and administrative privileges are distributed. Mastodon is made up of many interconnected servers, each hosted by an individual or party who need not be connected to the developers of Mastodon, and when a user joins Mastodon they choose a specific server to join (although they can migrate their content to an account on another server later if they so choose), and in general, there is nothing stopping a user on one server from interacting with a user on another server {\itshape a priori}. Moreover, the developers of Mastodon hold none of the administrative privileges. Instead, the parties who run each individual mastodon server have administrative privileges over what goes on on their server, including power over who is allowed to join and who is allowed to see posts from users on that server. In this way, Mastodon is decentralized with respect to its distribution of administrative privileges and its distribution of community-hosting responsibility.
 
-This naturally allows for a framework by which communities can create social friction around themselves. Specifically, each server is free to set their own guidelines on who is allowed to enter. These guidelines can be social (e.g. community members discuss whether or not they want to let the outsider in), technological (e.g. a user is let into the server that residents of a town use to talk about local politics if they can provide a crpytographic proof of their residence in the town), or a mix of both. 
+This naturally allows for a framework by which communities can create social friction around themselves. Specifically, each server is free to set their own guidelines on who is allowed to enter. These guidelines can be social (e.g. community members discuss whether or not they want to let the outsider in), technological (e.g. a user is let into the server that residents of a town use to talk about local politics if they can provide a cryptographic proof of their residence in the town), or a mix of both. 
 
 Letting communities set their own security and membership guidelines has another advantage: it reduces the scalability of attacks. Any bot-detection algorithm implemented by an open social network like Twitter will have the drawback that an any successful evasion of the algorithm will scale quite well. That is to say, since all communities on Twitter are uniform with regards to their protection under a bot-detection algorithm, a strategy for evading the algorithm in one community will also work in any other community. In contrast, letting every decentralized server create their own membership requirements is a security strategy that will not lend itself well to wide-scale attacks. In a world where each server is encouraged to customize their membership requirements, an attack that works well on one server is by no means guaranteed to work on any other server. This is an important advantage because it greatly reduces the economic efficiency of any potential attack. Moreover, since under our model the development privileges are still centralized, the developers of a system like Mastodon could still create a bot-detection algorithm and let servers adopt it for an extra layer of security.
 
@@ -290,7 +293,7 @@ Masden {\itshape et al} conducted interviews with 13 Nextdoor users across vario
 Payne also critiques the rigid geographic boundaries imposed by Nextdoor \cite{payne2017welcome}. Again, under a decentralized scheme, online communities would not need to be so discretely divided, even if they were tied to specific locations.
 
 
-On the other hand, Kurwa conducted an exploratory analysis in which he found that Nexdoor ``has
+On the other hand, Kurwa conducted an exploratory analysis in which he found that Nextdoor ``has
 become an important platform for the surveillance and policing of race in residential space''
 \cite{kurwa2019building}. In Section~\ref{sec:nextdoor_futurework}, we outline future work to better understand
 this phenomenon and the extent to which it is endemic to neighborhood-specific online communities.
@@ -336,7 +339,7 @@ Overall, although some research Nextdoor is hopeful with regards to the discursi
 \section{Research Directions}
 \label{sec:futurework}
 
-In this paper, we have hypothesized that enabling communities to establish social friction around themselves will increase security and lead to richer and more productive deliberatory experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. 
+In this paper, we have hypothesized that enabling communities to establish social friction around themselves will increase security and lead to richer and more productive deliberative experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. 
 
 To better understand the axes along which various social networks are centralized or decentralized, we have taxonomized several popular social networks (Table 1). We then leverage this taxonomy to outline plans for future work to empirically validate and further explore these ideas.
 
