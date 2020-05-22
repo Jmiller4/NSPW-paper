@@ -236,18 +236,54 @@ In section 7, we also outline future work to leverage cryptography (specifically
 
 Overall, although some research Nextdoor is hopeful with regards to the discursive environments of geographically-centered online networks, we ultimately seek a system with more flexibility than what Nextdoor provides. Furthermore, we note that Nextdoor's centralization of administrative capability is likely a factor contributing to its inflexibility of entrance requirements across communities -- for a centralized team, it is much more economical to create one set of entrance requirements that can be applied in any context.
 
-\section{a taxonomy of social networks}
+% \section{a taxonomy of social networks}
 
-In order to better understand the axes along which various social networks are centralized or decentralized, we have taxonomized several popular social networks  (Table \ref{tab:taxonomy}).
+% In order to better understand the axes along which various social networks are centralized or decentralized, we have taxonomized several popular social networks  (Table \ref{tab:taxonomy}).
 
-%%% Link to taxonomy in my google drive : https://docs.google.com/spreadsheets/d/1Q9rg_i6YAEYkcFf2JBfe5wJIKaecT4_MpXmSPnUIFSE/edit#gid=0
+% %%% Link to taxonomy in my google drive : https://docs.google.com/spreadsheets/d/1Q9rg_i6YAEYkcFf2JBfe5wJIKaecT4_MpXmSPnUIFSE/edit#gid=0
+
+% \begin{table*}
+%   \caption{A taxonomy of online networks}
+%   \label{tab:taxonomy}
+%   \begin{tabularx}{\textwidth}{llXX}
+%     \toprule
+%     Platform & Centralization of source code & Centralization of administrative privileges & Centralization of community hosting \\
+%     \midrule
+%     Twitter  & Centralized & Centralized\\
+%     Facebook & Centralized & Centralized (although, within Facebook {\itshape groups}, moderators have some administrative privileges) & Centralized\\
+%     Reddit   & Centralized & Decentralized & Centralized  \\
+%     Slack/ discord & Centralized & Decentralized & Centralized \\
+%     Group Chats & Centralized & N/A -- no one has administrative privileges & Centralized \\
+%     Mastodon & Decentralized (open source) & Decentralized & Decentralized\\
+%     Nextdoor & Centralized & Semi-centralized: power users can gain some administrative privileges & Centralized \\
+%     Blockchain Apps & Decentralized (open source) & N/A -- application-dependent & Decentralized\\
+%     \bottomrule
+%   \end{tabularx}
+% \end{table*}
+
+% Of these networks, three have decentralized administrative privileges (Reddit, Slack/Discord, and Mastodon), and of those three only Mastodon is decentralized with regards to community hosting. But without decentralized community hosting, administrative privileges are not {\itshape truly} decentralized, since the power given to administrators can still be altered by the central entity who hosts all the communities. For example, there is nothing stopping Reddit from changing its policy on subreddit administration and transferring some moderator power to a centralized in-house team.
+
+% We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an inappropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
+
+% Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. 
+
+
+\section{Research Directions}
+
+In this paper, we have hypothesized that enabling communities to establish social friction around themselves will increase security and lead to richer and more productive deliberatory experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. 
+
+To better understand the axes along which various social networks are centralized or decentralized, we have taxonomized several popular social networks (Table 1). We then leverage this taxonomy to outline plans for future work to empirically validate and further explore these ideas.
+
+\subsection{A taxonomy of networks}
+
+In Table 1, we taxonomize several popular online networks according to their centralization or decentralization of development responsibility, administrative responsibility, and community hosting responsibility.
 
 \begin{table*}
   \caption{A taxonomy of online networks}
   \label{tab:taxonomy}
   \begin{tabularx}{\textwidth}{llXX}
     \toprule
-    Platform & Centralization of source code & Centralization of administrative privileges & Centralization of community hosting \\
+    Platform & Development responsibility & Administrative responsibility & Community hosting responsibility \\
     \midrule
     Twitter  & Centralized & Centralized\\
     Facebook & Centralized & Centralized (although, within Facebook {\itshape groups}, moderators have some administrative privileges) & Centralized\\
@@ -265,16 +301,11 @@ Of these networks, three have decentralized administrative privileges (Reddit, S
 
 We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an inappropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
 
-% Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. 
-
-
-\section{Research Directions}
-
-In this paper, we have hypothesized that enabling communities to establish social friction around themselves will lead to richer and more productive deliberatory experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. We now outline plans for future work to empirically validate and further explore these ideas.
+This taxonomy is useful in guiding plans for future work, but we also note that expanding it could be another research direction in its own right.
 
 \subsection{Validating friction}
 
-To test our hypothesis on the effectiveness of social friction, we will conduct studies that measure the quality of conversations across online communities that exhibit various amounts of social friction. One promising set of communities to examine are Reddit's ``subreddits'', many online communities each with their own sets of rules. By using sentiment analysis to measure the productivity of conversations, we can compare trends across different subreddits with different entrance requirements and codes of conduct, and explore the extent to which these factors correlate with better conversations.
+To test our hypothesis on the effectiveness of social friction, we will conduct studies that measure the quality of conversations across online communities that exhibit various amounts of social friction. One promising set of communities to examine are Reddit's ``subreddits'', many online communities each with their own sets of rules (a property made possible by Reddit's distribution of administrative privileges). By using sentiment analysis to measure the nature of conversations, we can compare trends across different subreddits with different entrance requirements and codes of conduct, and explore the extent to which these factors correlate with better conversations.
 
 \subsection{Examining Nextdoor}
 
