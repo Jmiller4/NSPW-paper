@@ -389,7 +389,7 @@ A fitting analog might be Fishkin's concept of Deliberative Democracy \cite{fish
 Furthermore, we note that if one was able to build such an online community, its ideological diversity (assuming diversity of the underlying population) could make it {\itshape less} of an echo chamber than current sub-communities of popular social networking cites -- as stated above, these communities have already been found to exhibit filter bubble-like properties \cite{garimella2018political}.
 
 \subsection{Cryptography and geographic authentication}
-
+\label{sec:crypto}
 
 Suitably private and secure location attestation is a problem that could be well served by cryptographic primitives. Before designing such a system, it is important to carefully consider which facts must be attested and how they can be used to create social friction without sacrificing the efficiency gains of information technology.
 
@@ -398,13 +398,18 @@ One possible approach draws inspiration from the privacy preserving contract tra
 A similar and simple scheme could be used to support location attestation as follows: businesses set up bluetooth-enabled devices to communicate with customer phones. When a customer visits a business, they send the store's bluetooth device a random number. The business appends some geographic data (like the name of the town the business is in) to the number, hashes it, and sends the result to a public server to which only businesses have write access. Then, in order to prove that they were in a specific location, a user can reveal their random number and the relevant geographic data, and others can reconstruct the hashed value and check that it appears on the server. To prove long-term residence, a user could make many such claims, and if businesses also appended a timestamp before hashing then users could  attest to their location over time. This scheme is not robust to businesses and customers conspiring together, but provides a promising starting point for future work.  
 
 
-\if 0
-
 \section{Conclusion}
 
-We have presented a new viewpoint on security that seeks to  question the de-facto acceptance of the internet's openness across all application domains. We argue that in certain scenarios, the openness of the internet has the potential to do more harm than good. We define the notion of social friction and consider how it can be seen as a tool that physical communities use to provide security for themselves, and argue that friction can be leveraged as a security primitive in online spaces. We examine the structures of Mastodon and Nextdoor, two existing social networks, and consider the ways in which their structures enable communities to create friction around themselves. We present a taxonomy along which different networks are classified according to how they distribute key responsibilities and suggest directions for future work. All in all, we believe that the idea of social friction can be leveraged as a security tool to dramatically improve the quality of discursive communities and challenge preconceptions about the design of social networks and the nature of the internet. 
-
-\fi
+Efficient scaling is arguably the most important component of the Internet's meteoric rise in
+importance to human society. However, unchecked exponential growth is rarely if ever beneficial
+within a physical context. In certain scenarios, the openness enabled by that efficiency has shown
+the potential to do more harm than good, and we believe a judicious application of friction could
+maintain the benefits of ICT without losing the security benefits that humanity has developed over
+the last few millennia of traditional interpersonal interaction and community building. Overall we
+believe that security design deeply informed by these sociological and anthropological
+understandings of human behavior can lead to overall better outcomes for those involved, and
+likewise believe that the ingenuity of the engineers designing these systems can keep the loss of
+technical efficiency to a minimum.
 
 % \begin{acks}
 % The authors would like to thank Emma Hanlon and Gabriel Eisen for helpful discussions about Sociology and Anthropology.
