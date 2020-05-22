@@ -147,11 +147,11 @@ All of this evidence suggests that current popular social media platforms (e.g. 
 The rest of the paper proceeds as follows:
 
 \begin{itemize}
-\item In section 2, we define the notion of \textit{social friction}, show its connections to anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted outsiders from joining said social groups.
+\item In section 2, we define the notion of \textit{social friction}, show its connections to anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted outsiders from joining social groups.
 \item In section 3, we examine the ways in which social friction manifests itself on the internet, critically analyze the effect that mainstream perceptions of the internet have had on the ability of bad-faith actors to spread propaganda and disinformation, and propose that building networks with more social friction could mollify some of these problems.
 \item In section 4, we discuss two already-existing social networks, Mastodon and Nextdoor, which each satisfy some of the desiderata we see as integral to our model of social friction in online spaces.
-\item In section 5, we discuss the idea of overlaying social friction on pre-existing networks, and concerns about creating filter bubbles.
-\item In section 6, we give a taxonomy of social networks according to the lines along which we analyze them throughout the paper.
+\item In section 5, we give a taxonomy of many popular social networks according to the lines along which we analyzed Mastodon and Nextdoor.
+\item In section 6, we discuss the idea of overlaying social friction on pre-existing networks, and concerns about creating filter bubbles.
 \item In section 7, we propose future work to further explore and validate our ideas.
 \item In section 8, we conclude the paper.  
 \end{itemize}
@@ -215,7 +215,7 @@ We do not mean to bring up Mastodon in order to suggest that it needs to become 
 
 \subsection{Nextdoor and location-specific networks}
 
-Given that we propose geographically-based communities as a main use-case for the idea of social friction, we now briefly discuss Nextdoor \footnote{\url{https://nextdoor.com/}}, a social network site tailored for individual neighborhoods.
+Given that we propose geographically-based communities as a main use-case for the idea of social friction, we now briefly discuss Nextdoor\footnote{\url{https://nextdoor.com/}}, a social network site tailored for individual neighborhoods.
 
 Nextdoor is a popular current social networking site where users join neighborhood-specific communities. In order to join one such community, a user must either send Nextdoor a picture of their driver's license or enter a code on a postcard mailed to their address. In this way, Nextdoor centralizes an important administrative privilege (the power to decide who can join a neighborhood's network), although power users can gain some other administrative privileges. Unlike Mastodon, Nextdoor also centralizes hosting responsibility.
 
@@ -230,31 +230,6 @@ We also note that the entry requirements Nextdoor places on its users are perhap
 In section 7, we also outline future work to leverage cryptography (specifically zero-knowledge proofs) to allow users to make statements like ``I spend at least 50 percent of my time in this town'', which could be used as inputs into a community's scheme of entrance requirements. Zero-knowledge proofs of statements like this could be especially useful with respect to more complicated geographic situations where a user's place of residence does not necessarily reflect the entire scope of their political interests. For example, one could imagine a situation where many people live in area $A$ but commute to area $B$ for work -- perhaps these people should have a say in discussions about the economic policies of area $B$. Nextdoor does not support  this type of fine grained and community-specific specialization of entrance requirements.
 
 Overall, although some research Nextdoor is hopeful with regards to the discursive environments of geographically-centered online networks, we ultimately seek a system with more flexibility than what Nextdoor provides. Furthermore, we note that Nextdoor's centralization of administrative capability is likely a factor contributing to its inflexibility of entrance requirements across communities -- for a centralized team, it is much more economical to create one set of entrance requirements that can be applied in any context.
-
-\section{Challenges to Adopting Social Friction}
-
-In this section, we address two challenges to creating communities with social friction: the network effects that make it difficult to grow new social networks, and the possibility of forming a filter bubble.
-
-\subsection{Overlaying friction on other networks}
-
-The network effects \cite{katz1994systems} exhibited by large social networks mean that wide-scale adoption of other platforms might come slowly, or not at all. But the idea of social friction can also be used to build overlays on existing social networks, which presents a potentially appealing compromise.  
-
-For example, one could imagine a tool that lets Twitter users define their own metric of trust relative to another user (e.g. number of followers in common, distance away in the follow graph, etc) and augments the user's Twitter feed by only showing the user tweets from other users who attain a threshold trust score, under whatever metric the user defines. Since each user is free to customize their own metric of trust, we gain an advantage from decentralization similar to the advantage gained by letting each individual Mastodon server set its own membership rules. That is to say, for users Alice and Bob with different trust metrics, a strategy that lets an attacker create many bots that can gain Alice's trust will not necessarily succeed in creating bots that can unfairly gain Bob's trust.
-
-We also note that it might not be appropriate to incorporate the idea of social friction into every online network. In many scenarios, the ability to receive information from a previously unknown or untrusted source should be seen as a net positive. 
-
-\subsection{Filter bubbles and echo chambers}
-
-We also wish to address the concern that encouraging the creation of communities surrounded social friction could lead to filter bubbles \cite{pariser2011filter}. Also colloquially referred to as ``ideological echo chambers'', filter bubbles are online spaces where users only associate with other users whose politics closely align with theirs.  
-
-Importantly, in the context of political discussion, our goal is not to enable the creation communities that are divided along political lines, but instead to enable the creation of communities that are free of bad-faith outsiders who might wish to sway the conversation in one direction or another. 
-
-A fitting analog might be Fishkin's concept of Deliberative Democracy \cite{fishkin1991democracy}, which has been implemented most recently via the America in One Room project \cite{AmericaInOneRoom}. This event saw Americans from all walks of life invited to a single location in Texas where they debated topics germane to American politics with each other. The organizers of this event did not seek to exclusively invite participants with a specific political orientation, but they {\itshape did} seek to only invite participants who were from America, given that the event was centered around debating American politics. In the same way, our hope is that online communities can use social friction to keep out bad-faith outsiders while still allowing for healthy and ideologically diverse debate.
-
-Furthermore, we note that if one was able to build such an online community, its ideological diversity (assuming diversity of the underlying population) could make it {\itshape less} of an echo chamber than current sub-communities of popular social networking cites, which have been found to exhibit filter bubble-like properties \cite{pariser2011filter, garimella2018political}.
-
-% Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. 
-
 
 \section{a taxonomy of social networks}
 
@@ -285,20 +260,51 @@ Of these networks, three have decentralized administrative privileges (Reddit, S
 
 We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an inappropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
 
-\section{Future Work}
+
+\section{Filter Bubbles and Echo Chambers}
+
+We also wish to address the concern that encouraging the creation of communities surrounded social friction could lead to filter bubbles \cite{pariser2011filter}. Also colloquially referred to as ``ideological echo chambers'', filter bubbles are online spaces where users only associate with other users whose politics closely align with theirs.  
+
+Importantly, in the context of political discussion, our goal is not to enable the creation communities that are divided along political lines, but instead to enable the creation of communities that are free of bad-faith outsiders who might wish to sway the conversation in one direction or another. 
+
+A fitting analog might be Fishkin's concept of Deliberative Democracy \cite{fishkin1991democracy}, which has been implemented most recently via the America in One Room project \cite{AmericaInOneRoom}. This event saw Americans from all walks of life invited to a single location in Texas where they debated topics germane to American politics with each other. The organizers of this event did not seek to exclusively invite participants with a specific political orientation, but they {\itshape did} seek to only invite participants who were from America, given that the event was centered around debating American politics. In the same way, our hope is that online communities can use social friction to keep out bad-faith outsiders while still allowing for healthy and ideologically diverse debate.
+
+Furthermore, we note that if one was able to build such an online community, its ideological diversity (assuming diversity of the underlying population) could make it {\itshape less} of an echo chamber than current sub-communities of popular social networking cites, which have been found to exhibit filter bubble-like properties \cite{pariser2011filter, garimella2018political}.
+
+% Specifically, we see social friction as being extremely useful to the operation of online deliberation \cite{semaan2015designing} and participatory budgeting platforms \cite{de1998participatory,shah2007participatory,wampler2010participatory,cabannes2004participatory}, via which participants can debate each other and vote on policy decisions or recommendations. 
+
+
+
+\section{Research Directions}
 
 In this paper, we have hypothesized that enabling communities to establish social friction around themselves will lead to richer and more productive deliberatory experiences inside said communities. Moreover, we have hypothesized that the centralization or decentralization of a network's administrative and hosting responsibilities has a profound impact on the way communities can create social friction around themselves. We now outline plans for future work to empirically validate and further explore these ideas.
 
+\subsection{Validating friction}
+
 To test our hypothesis on the effectiveness of social friction, we will conduct studies that measure the quality of conversations across online communities that exhibit various amounts of social friction. One promising set of communities to examine are Reddit's ``subreddits'', many online communities each with their own sets of rules. By using sentiment analysis to measure the productivity of conversations, we can compare trends across different subreddits with different entrance requirements and codes of conduct, and explore the extent to which these factors correlate with better conversations.
+
+\subsection{Examining Nextdoor}
 
 Nextdoor is of particular interest to us. It would appear that very little academic literature has examined Nextdoor: in our literature review, we were only able to find three papers \cite{masden2014tensions, kurwa2019building, payne2017welcome}, all of which were discussed in section 4.2. Importantly, Masden \etal's interviews and Kurwa's analysis paint very different pictures of Nextdoor communities, with Masden \etal suggesting that Nextdoor can be a positive force for communities \cite{masden2014tensions} and Kurwa arguing that Nextdoor can be abused as a tool for discriminatory surveillance \cite{kurwa2019building}. We hope to conduct more interviews to better understand the ways in which different communities use Nextdoor, the harms that can arise out of its misuse, and the extent to which those harms are endemic to location-specific online communities.
 
-On the technological side, we have already begun to design a privacy-preserving cryptographic protocol which uses zero-knowledge proofs \cite{goldreich1991proofs} to allow agents to show certain facts about their location history. We hope that a flexible system for making location-related proofs in zero knowledge will be a strong foundation from which to build other technological tools related to social friction.
+\subsection{Overlaying friction on other networks}
+
+The network effects \cite{katz1994systems} exhibited by large social networks mean that wide-scale adoption of other platforms might come slowly, or not at all. But the idea of social friction can also be used to build overlays on existing social networks, which presents a potentially appealing compromise.  
+
+For example, one could imagine a tool that lets Twitter users define their own metric of trust relative to another user (e.g. number of followers in common, distance away in the follow graph, etc) and augments the user's Twitter feed by only showing the user tweets from other users who attain a threshold trust score, under whatever metric the user defines. Since each user is free to customize their own metric of trust, we gain an advantage from decentralization similar to the advantage gained by letting each individual Mastodon server set its own membership rules. That is to say, for users Alice and Bob with different trust metrics, a strategy that lets an attacker create many bots that can gain Alice's trust will not necessarily succeed in creating bots that can unfairly gain Bob's trust. 
+
+We are interested in building tools like the one mentioned above, partially for their immediate utility and partially because doing so will allow us to further explore the ways that social friction can be realized in online spaces.
+
+But we also note that it might not be appropriate to incorporate the idea of social friction into every social network. In many scenarios, the ability to receive information from a previously unknown or untrusted source should be seen as a net positive. 
+
+
+\subsection{Cryptography and geographic authentication}
+On the technological side, we have already begun to design a privacy-preserving cryptographic protocol which uses zero-knowledge proofs \cite{goldreich1991proofs} to allow agents to show certain facts about their location history.  We hope that a flexible system for making location-related proofs in zero knowledge will be a strong foundation from which to build other technological tools related to social friction.
 
 
 \section{Conclusion}
 
-We have presented a new viewpoint on security that seeks to challenge the de-facto acceptance of the internet's openness. We suggest that in certain scenarios, the openness of the internet has the potential to do more harm than good, and that this argument is supported by recent events in American politics. We define the notion of social friction and consider how it can be seen as a tool that physical communities use to provide security for themselves, and argue that some online communities could benefit from social friction. We examine the structures of Mastodon and Nextdoor, two existing social networks, and consider the ways in which their structures enable communities to create social friction around themselves. We then discuss the idea of overlaying friction-y systems on pre-existing social networks and address concerns about filter bubbles. Lastly, we present a taxonomy along which different networks are classified according to how they distribute development, administrative, and hosting responsibilities, and suggest future work. All in all, we believe that the idea of social friction has the potential to dramatically improve the quality of discursive communities and challenge preconceptions about the design of social networks and the nature of the internet. 
+We have presented a new viewpoint on security that seeks to challenge the de-facto acceptance of the internet's openness. We suggest that in certain scenarios, the openness of the internet has the potential to do more harm than good, and that this argument is supported by recent events in American politics. We define the notion of social friction and consider how it can be seen as a tool that physical communities use to provide security for themselves, and argue that some online communities could benefit from social friction. We examine the structures of Mastodon and Nextdoor, two existing social networks, and consider the ways in which their structures enable communities to create social friction around themselves. We present a taxonomy along which different networks are classified according to how they distribute development, administrative, and hosting responsibilities. Lastly, we address concerns about filter bubbles and suggest future work. All in all, we believe that the idea of social friction has the potential to dramatically improve the quality of discursive communities and challenge preconceptions about the design of social networks and the nature of the internet. 
 
 
 % \begin{acks}
