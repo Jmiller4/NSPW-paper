@@ -241,6 +241,7 @@ One can see social friction as a mechanism through which communities can provide
 \section{Friction on the internet?}
 \label{sec:friction_internet}
 
+
 In our view, the design of popular social networks encourages the formation of communities surrounded by very little friction. Any Twitter account can tweet at any other account, as long as both are public. Facebook friend requests are often accepted with relative ease in comparison to the effort involved in forming an offline friendship \cite{rashtian2014befriend}, and the same could be said of acceptance into Facebook groups \cite{park2009being}. 
 
 The relative openness of these platforms should come as no surprise when one considers the context in which they were built: the internet has been (rightly) praised for, and achieved global relevance due to the way it allows ideas and digital artifacts to travel between people and communities with relatively little hindrance \cite{box2016internet, box2016economic}. In general, openness is seen as a defining characteristic of the internet \cite{bechmann2014ubiquitous, lessig2002future, daigle2015nature}. That attitude has accordingly manifested itself in the domain of social networks: besides the evidence of social media openness mentioned above \cite{rashtian2014befriend, park2009being}, a recent survey of Sybil attack defenses in social networks cites openness as a fundamental property of online social networks \cite{al2017sybil}. At Facebook's 2016 F8 developer conference\footnote{\url{https://www.f8.com/}}, the theme of CEO Mark Zuckerberg's keynote presentation was {\itshape ``give everyone the power to share anything with anyone'' }\cite{USAtoday_F8_keynote_sharequote}. 
@@ -405,9 +406,21 @@ Furthermore, we note that if one was able to build such an online community, its
 
 Suitably private and secure location attestation is a problem that could be well served by cryptographic primitives. Before designing such a system, it is important to carefully consider which facts must be attested and how they can be used to create social friction without sacrificing the efficiency gains of information technology.
 
-One possible approach draws inspiration from the privacy preserving contract tracing specification released by Apple and Google \cite{contact_tracing_spec}. The specification was developed for the purpose of informing users if they spent time near someone diagnosed with COVID-19, without revealing the identity of the diagnosed individual. Essentially, the specification describes a scheme in which phones within a close proximity to each other exchange random-looking numbers over Bluetooth. Each phone records a list of numbers it has both sent and received. When an individual is diagnosed with COVID-19, they can choose to anonymously upload their list of {\itshape sent} random numbers to a central server. All phones query the server daily and check if any uploaded numbers appear in that phone's list of received numbers -- if a match occurs, then that phone alerts its user that they came into contact with someone who had COVID-19. 
-
-A similar and simple scheme could be used to support location attestation as follows: businesses set up bluetooth-enabled devices to communicate with customer phones. When a customer visits a business, they send the store's bluetooth device a random number. The business appends some geographic data (like the name of the town the business is in) to the number, hashes it, and sends the result to a public server to which only businesses have write access. Then, in order to prove that they were in a specific location, a user can reveal their random number and the relevant geographic data, and others can reconstruct the hashed value and check that it appears on the server. To prove long-term residence, a user could make many such claims, and if businesses also appended a timestamp before hashing then users could  attest to their location over time. This scheme is not robust to businesses and customers conspiring together, but provides a promising starting point for future work.  
+One approach which composes well with our concept of social friction is Immorlica et~al.'s concept
+of Verifying Identity as a Social Intersection~\cite{immorlica2019verifying}. Briefly, they propose
+a method of constructing digital identities in a manner that aligns with the social construction of
+identity rather than the individual-focused and atomized concepts found in traditional technical
+systems. This approach could be used as the substrate to a technical system which implements social
+friction: one could imagine limiting access to, or efficiency in rapidly and widely sharing, content
+outside of one's currently existing social milieu. Even though this rejection of the benefits of
+Internet scale would be blasphemous to Mark Zuckerberg in light of his comments mentioned in
+Section~\ref{sec:friction}, his own company has done exactly that: due to the spread of rumors
+related to COVID--19, WhatsApp placed a rudimentary form of social friction on forwarding viral
+messages, restricting messages which had been sent through a chain of five or more people to only
+being forwarded to a single person.\cite{whatsappmassfwd} It's possible that in a pandemic such a
+rudimentary "speed bump" might be necessary and helpful, applying this strategy more elegantly,
+perhaps in line with the concept of identity as a social intersection, could enable such protection
+without such a restrictive and blunt instrument.
 
 
 \section{Conclusion}
