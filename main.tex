@@ -48,7 +48,7 @@
 \begin{document}
 
 
-\title{Social Friction in Online Communities}
+\title{Security through Inefficiency: Leveraging Social Friction to Protect Online Coordination}
 
 %
 
@@ -130,11 +130,34 @@ Bots and disinformation plague social networks and have significantly altered po
 
 %%% brainstormed this for a bit and was having a hard time visualizing how that would go, especially with regards to the specific pieces of evidence I could bring up.
 
-From a societal perspective, the information \& communication technologies (ICT) of the contemporary era have brought about incredibly substantial change in the latency, frequency, and audience sizes of interpersonal communication: with suitable connectivity and hardware, high-definition intercontinental video chat is possible with latency at a nontrivial fraction of the speed of light, and instantaneous broadcast is possible to millions or billions of potential audience members.
+From a societal perspective, the information \& communication technologies (ICT) of the contemporary
+era have brought about incredibly substantial change in the latency, frequency, and audience sizes
+of interpersonal communication: with suitable connectivity and hardware, high-definition
+intercontinental video chat is possible with latency at a nontrivial fraction of the speed of light,
+and instantaneous broadcast is possible to millions or billions of potential audience members.
 
-Perhaps even more of an upheaval however is the economic impact of ICT: once the physical infrastructure is deployed, the marginal cost of delivering a computation-based service is infinitesimal, and thus companies like Google and Facebook can operate at truly global economies of scale. The raw benefits of these technologies is clear: software products like Facebook or Google Search easily have development costs of several billion dollars, and are available without monetary cost to billions of users - in no small part due to how little additional cost is associated with providing the service to an additional user. Beyond this benefit, security also benefits from these economies of scale: these companies (and their products, and their users) not only benefit from having the organizational capacity to devote significant resources to security (exemplified by Google's Project Zero,\footnote{\url{https://googleprojectzero.blogspot.com/}} which devotes substantial resources to fixing security bugs in other companies' products for free), but they also benefit from the immense visibility afforded to companies that operate ICT-based services at global scale, being able to record every request made to every piece of software within their datacenters.
+Perhaps even more of an upheaval however is the economic impact of ICT: once the physical
+infrastructure is deployed, the marginal cost of delivering a computation-based service is
+infinitesimal, and thus companies like Google and Facebook can operate at truly global economies of
+scale. The raw benefits of these technologies is clear: software products like Facebook or Google
+Search easily have development costs of several billion dollars, and are available without monetary
+cost to billions of users - in no small part due to how little additional cost is associated with
+providing the service to an additional user. Beyond this benefit, security also benefits from these
+economies of scale: these companies (and their products, and their users) not only benefit from
+having the organizational capacity to devote significant resources to security (exemplified by
+Google's Project Zero,\footnote{\url{https://googleprojectzero.blogspot.com/}} which devotes
+substantial resources to fixing security bugs in other companies' products for free), but they also
+benefit from the immense visibility afforded to companies that operate ICT-based services at global
+scale, being able to record every request made to every piece of software within their datacenters.
 
-It would be outlandish to argue that these economies of scale are anything besides a net positive for the people who can take advantage of them. However, they are not without their downsides. Most obvious is the shift toward a more centralized mass media and communications infrastructure: in the modern advertising-driven information economy, control over things like local media have arguably become more centralized than they have been since the invention of the printing press. Additionally, while disinformation and information warfare have existed for quite some time, the manipulation happening in contemporary online discourse is wreaking significant havoc for society's ability to effectively coordinate and regulate some semblance of a shared truth.
+It would be outlandish to argue that these economies of scale are anything besides a net positive
+for the people who can take advantage of them. However, they are not without their downsides. Most
+obvious is the shift toward a more centralized mass media and communications infrastructure: in the
+modern advertising-driven information economy, control over things like local media have arguably
+become more centralized than they have been since the invention of the printing press. Additionally,
+while disinformation and information warfare have existed for quite some time, the manipulation
+happening in contemporary online discourse is wreaking significant havoc for society's ability to
+effectively coordinate and regulate some semblance of a shared truth.
 
 \subsection{Online disinformation}
 
@@ -158,15 +181,31 @@ Misuse of social media tools in human hands can also lead to the unraveling of s
 
 \subsection{Security through Inefficiency}
 
-We hypothesize that these online manipulation campaigns owe a large portion of their success to the mismatch between global scale ICT-supported human communication and the techniques humans have used to enforce group membership at the traditional community scale. In this paper we propose the paradigm of \emph{security through inefficiency:} the reconsideration of efficiencies of scale for the sake of maintaining the security of an ICT based system. While it would be simple to take a Luddite--inspired path and reject these economies of scale wholesale, we claim that security can be improved through an intentional application of \emph{social friction} that is aligned with an anthropological and sociological understanding of human coordination and communication.
+We hypothesize that these online manipulation campaigns owe a large portion of their success to the
+mismatch between global scale ICT-supported human communication and the techniques humans have used
+to enforce group membership at the traditional community scale. In this paper we propose the
+paradigm of \emph{security through inefficiency:} the reconsideration of efficiencies of scale for
+the sake of maintaining the security of an ICT based system. While it would be simple to take a
+Luddite--inspired path and reject these economies of scale wholesale, we claim that security can be
+improved through an intentional application of \emph{social friction} that is aligned with an
+anthropological and sociological understanding of human coordination and communication.
 
 The rest of the paper proceeds as follows:
 
 \begin{itemize}
-\item In Section 2, we define the notion of \textit{social friction}, show its connections to anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted outsiders from joining social groups.
-\item In Section 3, we examine the ways in which social friction manifests itself on the internet, critically analyze the effect that mainstream perceptions of the internet have had on the ability of bad-faith actors to spread propaganda and disinformation, and propose that building networks with more social friction could mollify some of these problems.
-\item In Section 4, we discuss two already-existing social networks, Mastodon and Nextdoor, which each satisfy some of the desiderata we see as integral to our model of social friction in online spaces.
-\item In Section 5, we propose a taxonomy of social network platforms based on their frictive properties, and propose research directions predicated on exploring the concept of social friction in social media.
+\item In Section 2, we define the notion of \textit{social friction}, show its connections to
+anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted
+outsiders from joining social groups.
+\item In Section 3, we examine the ways in which social friction manifests itself on the internet,
+critically analyze the effect that mainstream perceptions of the internet have had on the ability of
+bad-faith actors to spread propaganda and disinformation, and propose that building networks with
+more social friction could mollify some of these problems.
+\item In Section 4, we discuss two already-existing social networks, Mastodon and Nextdoor, which
+each satisfy some of the desiderata we see as integral to our model of social friction in online
+spaces.
+\item In Section 5, we propose a taxonomy of social network platforms based on their frictive
+properties, and propose research directions predicated on exploring the concept of social friction
+in social media.
 \end{itemize}
 
 % The rest of the paper proceeds as follows. In section 2, we define the notion of \textit{social friction}, show its connections to anthropology and sociology, and discuss how it can act as a security mechanism that keeps unwanted outsiders from joining said social groups. In section 3 we examine the ways in which social friction manifests itself on the internet, critically analyze the effect that mainstream perceptions of the internet have had on the ability of bad-faith actors to spread propaganda and disinformation, and propose that building networks with more social friction could mollify some of these problems. In section 4, we discuss two already-existing social networks, Mastodon and Nextdoor, which each satisfy some of the desiderata we see as integral to our model of social friction in online spaces. We conclude by giving a taxonomy of social networks according to the lines along which we analyze them throughout the paper, and propose future work to empirically validate our arguments. 
