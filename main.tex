@@ -186,7 +186,7 @@ One can see social friction as a mechanism through which communities can provide
 
 In our view, the design of popular social networks encourages the formation of communities surrounded by very little friction. Any Twitter account can tweet at any other account, as long as both are public. Facebook friend requests are often accepted with relative ease in comparison to the effort involved in forming an offline friendship \cite{rashtian2014befriend}, and the same could be said of acceptance into Facebook groups \cite{park2009being}. 
 
-The relative openness of these platforms should come as no surprise when one considers the context in which they were built: the internet has been (rightly) praised for, and achieved global relevance due to the way in which it allows ideas and digital artifacts to travel between people and communities with relatively little hindrance \cite{box2016internet, box2016economic}. In general, openness is seen as a defining characteristic of the internet \cite{bechmann2014ubiquitous, lessig2002future, daigle2015nature}. That attitude has accordingly manifested itself in the domain of social networks: besides the evidence of social media openness mentioned above \cite{rashtian2014befriend, park2009being}, a recent survey of Sybil attack defenses in social networks cites openness as a fundamental property of online social networks \cite{al2017sybil}. At Facebook's 2016 F8 developer conference\footnote{\url{https://www.f8.com/}}, the theme of CEO Mark Zuckerberg's keynote presentation was {\itshape ``give everyone the power to share anything with anyone'' }\cite{USAtoday_F8_keynote_sharequote}. 
+The relative openness of these platforms should come as no surprise when one considers the context in which they were built: the internet has been (rightly) praised for, and achieved global relevance due to the way it allows ideas and digital artifacts to travel between people and communities with relatively little hindrance \cite{box2016internet, box2016economic}. In general, openness is seen as a defining characteristic of the internet \cite{bechmann2014ubiquitous, lessig2002future, daigle2015nature}. That attitude has accordingly manifested itself in the domain of social networks: besides the evidence of social media openness mentioned above \cite{rashtian2014befriend, park2009being}, a recent survey of Sybil attack defenses in social networks cites openness as a fundamental property of online social networks \cite{al2017sybil}. At Facebook's 2016 F8 developer conference\footnote{\url{https://www.f8.com/}}, the theme of CEO Mark Zuckerberg's keynote presentation was {\itshape ``give everyone the power to share anything with anyone'' }\cite{USAtoday_F8_keynote_sharequote}. 
 
 Most research on bot detection and Sybil attack defense in the context of social networks follows this same ideological trend. Many proposed solutions are {\itshape reactive} in nature, meaning that the authors take the openness of the system as a given, and build tools to figure out which actors within it are bots/Sybil identities. Of the 19 techniques surveyed in a 2017 article \cite{al2017sybil}, all but three \cite{yu2006sybilguard,yu2008sybillimit,Tran2011Gatekeeper} were reactive. Research on bot detection (e.g. \cite{davis2016botornot}) is also reactive, but such work is aimed at having a direct material impact on current social networks, so it is understandable that this vein of research would take the status quo as a given.
 
@@ -202,7 +202,7 @@ All of this evidence suggests that in certain situations it could be useful or e
 
 \section{Network structure and social friction}
 
-In this section we analyze two existing social networks, Mastodon and Nextdoor, and discuss some of their structural elements which we feel would be conducive to incorporating social friction into online spaces.
+In this section we analyze two existing social networks, Mastodon and Nextdoor, and discuss some of their structural elements which we feel would be conducive to incorporating social friction into online spaces for improved security.
 
 \subsection{Mastodon and distributed administration/ community Hosting}
 
@@ -220,9 +220,9 @@ We do not mean to bring up Mastodon in order to suggest that it needs to become 
 
 \subsection{Nextdoor and location-specific networks}
 
-Given that we propose geographically-based communities as a main use-case for the idea of social friction, we now briefly discuss Nextdoor\footnote{\url{https://nextdoor.com/}}, a social network site tailored for individual neighborhoods.
+Given that we propose geographically-based online communities as a main use-case for the idea of social friction, we now discuss  Nextdoor\footnote{\url{https://nextdoor.com/}}, a social networking platform tailored to individual neighborhoods. We examine the security Nextdoor provides to its users and review academic work on the quality of its communities.
 
-Nextdoor is a popular current social networking site where users join neighborhood-specific communities. In order to join one such community, a user must either send Nextdoor a picture of their driver's license or enter a code on a postcard mailed to their address. In this way, Nextdoor centralizes an important administrative privilege (the power to decide who can join a neighborhood's network), although power users can gain some other administrative privileges. Unlike Mastodon, Nextdoor also centralizes hosting responsibility.
+Nextdoor is a social networking platform where users join communities specific to the neighborhood they live in. In order to join one such community, a user must either send Nextdoor a picture of their driver's license or enter a code on a postcard mailed to their address. In this way, Nextdoor centralizes an important administrative privilege: the power to decide who can join a neighborhood's network. However, power users can gain some other administrative privileges. Unlike Mastodon, Nextdoor also centralizes hosting responsibility.
 
 Masden {\itshape et al} conducted interviews with 13 Nextdoor users across various neighborhoods in a metropolitan area and found that participants reported strong community engagement and ``a lack of divisive or combative content'' on the platform, however they also reported that privacy concerns and disagreements about the boundaries of specific neighborhoods were a cause for tension \cite{masden2014tensions}. We are heartened by Masden's positive findings, and feel that participants' anxieties about privacy and neighborhood boundaries could largely be mollified in a decentralized system that offered increased privacy protections (partially possible due to a reduced need to please advertisers) and the ability for self-sovereign communities to change their boundaries over time, rather than having those boundaries controlled by a centralized source.
 
@@ -301,7 +301,7 @@ Of these networks, three have decentralized administrative privileges (Reddit, S
 
 We can also see the ``report'' functions on Twitter and Facebook (via which anyone can flag an inappropriate post for moderator review) as an attempt to distribute some administrative capability throughout the network. However, any reports made under such a scheme must still pass through a centralized bottleneck of in-house moderators. 
 
-This taxonomy is useful in guiding plans for future work, but we also note that expanding it could be another research direction in its own right.
+This taxonomy is useful in guiding plans for future work, but we also note that expanding it to catalog networks in different ways might constitute a research direction in its own right.
 
 \subsection{Validating friction}
 
